@@ -20,11 +20,17 @@ print(piece_CID, label, provider)
 
 deal_log = 'log/'+str(deal_id) + '.log'
 get_retrieve_cmd = ['lotus', 'client', 'retrieve', '--provider', str(provider), '--pieceCid', str(piece_CID), label,
-                    str(output_file), '>', deal_log]
-print(get_retrieve_cmd)
-result = subprocess.Popen(" ".join(get_retrieve_cmd), stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True)
+                    str(output_file), '>>', deal_log]
 
 f = open(deal_log, "a")
+f.write(" ".join(get_retrieve_cmd))
+f.close()
+
+print(get_retrieve_cmd)
+
+result = subprocess.Popen(" ".join(get_retrieve_cmd), stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True)
+
+f = open(deal_log, "ab")
 f.write(result.stderr.readline())
 f.close()
 
