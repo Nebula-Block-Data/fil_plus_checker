@@ -1,4 +1,4 @@
-# fil plus checker
+# Fil Plus Checker
 Fil plus checker is a tool for retrieval data based on deal it.The retrieval logs will be stored at logs/<deal_id>.log
 
 ## How to use
