@@ -1,5 +1,6 @@
 # fil_plus_checker
-fil plus checker is a toolf for retrieval data based on deal it.The retrieval logs will be stored at logs/<deal_id>.log
+Fil plus checker is a tool for retrieval data based on deal it.The retrieval logs will be stored at logs/<deal_id>.log
+
 ## How to use
 
 ```commandline
