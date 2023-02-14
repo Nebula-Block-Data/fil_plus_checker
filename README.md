@@ -18,7 +18,7 @@ check the log for progress
 ```shell
 tail -f log/<deal_id>.log
 ```
-Sammple Output
+Sample Output
 
 ```
 lotus client retrieve --provider f02030031 --pieceCid baga6ea4seaqclgtbobbn5cqz7zylla7j3r4zbv52mg253vhe2vdyv5dl4ppwykq QmYiq3D8SY5863wKxFHaqXhjSeMNR264wqGyLuBa5rud3a 20230214-050552.file >> log/24730285.log
