@@ -24,6 +24,8 @@ get_retrieve_cmd = ['lotus', 'client', 'retrieve', '--provider', str(provider), 
 
 f = open(deal_log, "a")
 f.write(" ".join(get_retrieve_cmd))
+f.write('\n')
+
 f.close()
 
 print(get_retrieve_cmd)
@@ -32,6 +34,8 @@ result = subprocess.Popen(" ".join(get_retrieve_cmd), stdout=subprocess.PIPE, st
 
 f = open(deal_log, "ab")
 f.write(result.stderr.readline())
+f.write(b'\n')
+f.write(result.stdout.readline())
 f.close()
 
 print(result.stderr.readline())
